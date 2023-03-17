@@ -1,0 +1,241 @@
+$grey: #202020;
+$light-grey: #c2c2c2;
+$white: #fff;
+$blue: #5528ff;
+$main-text: #4f4f4f;
+$secondry-text: #b2b2b2;
+$footer-bcg: #f7f7f7;
+
+$trans-time: 0.2s; // * {  margin: 0;  padding: 0;}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.wrap {
+  max-width: 1180px; // width: 100%;
+  padding-left: 15px; //0
+  padding-right: 15px; //0
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.header {
+  padding-top: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+}
+
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+
+  &_img {
+    display: block;
+    height: 58px;
+    width: 58px;
+    background-image: url(../img/logo.svg);
+    margin-right: 25px;
+  }
+
+  &_text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #202020;
+  }
+}
+
+.nav {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 14px;
+
+  & > li {
+    margin-left: 37px;
+
+    & > a {
+      text-decoration: none;
+      color: $grey;
+      transition: $trans-time;
+
+      &:hover {
+        text-shadow: 2px 2px 2px $blue;
+      }
+    }
+  }
+
+  &_btn {
+    background-color: $blue;
+    border-radius: 5px;
+    padding: 7px 14px;
+    color: $white;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+  }
+}
+
+.title-main {
+  font-size: 56px;
+  color: $grey;
+  font-weight: 700;
+  letter-spacing: 0.15px;
+  margin-top: 120px;
+  margin-bottom: 34px;
+}
+
+.text-main {
+  font-size: 32px;
+  color: $main-text;
+  max-width: 770px;
+  letter-spacing: 0.01px;
+
+  line-height: 1.58;
+  margin-bottom: 65px;
+}
+
+.button {
+  background-color: $blue;
+  border-radius: 10px;
+  padding: 15px 58px;
+  color: $white;
+  border: none; // font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 110px;
+}
+
+.page {
+  position: relative;
+
+  &_top {
+    border-top: 1px solid $light-grey;
+  }
+
+  & h2 {
+    position: absolute;
+    top: -25px;
+    font-size: 14px;
+    font-weight: 300;
+    background-color: $white; //4 transparens hr
+    padding: 5px 15px;
+    text-transform: uppercase;
+    color: $light-grey;
+  }
+}
+
+.services {
+  padding-top: 57px;
+  padding-bottom: 120px;
+  display: grid; // grid-template: 50% 50%/50% 50%;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 20px;
+
+  & h3 {
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 17px;
+  }
+
+  & p {
+    font-size: 14px;
+    color: $secondry-text;
+    line-height: 1.5;
+    max-width: 300px;
+  }
+
+  &_item {
+    display: flex; // justify-content: flex-start;
+    align-items: center;
+  }
+
+  &_img {
+    flex-basis: 183px;
+    text-align: center;
+    padding-top: 25px;
+  }
+
+  &_text {
+    flex-basis: calc(100% - 120px);
+  }
+}
+
+.clients {
+  display: grid;
+  grid-template: repeat(4, 1fr) / repeat(4, 25%); // repeat(2, 1fr) / repeat(4, 25%) //120px 120px / repeat(4, 25%);  // text-align: center;
+  grid-row-gap: 40px;
+  padding-top: 85px;
+  padding-bottom: 22px;
+
+  &_i {
+    text-align: center;
+  }
+}
+
+.team {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); // repeat(3, 1fr) / repeat(3, 33%);
+  grid-row-gap: 57px;
+  padding: 109px 0;
+
+  &-item {
+    display: flex;
+    justify-content: flex-start; //~~~~~~~~~~
+    align-items: center; //~~~~~~~~~~~~
+
+    & > img {
+      margin-right: 35px;
+    }
+
+    & > div {
+      flex-basis: calc(100% - 100px); //~~~~~~~
+    }
+
+    & h3 {
+      font-size: 28px;
+      color: $grey;
+      margin-top: 8px;
+      margin-bottom: 0;
+    }
+
+    & p {
+      font-size: 14px;
+      color: $secondry-text;
+    }
+  }
+}
+
+
+footer {
+  background-color: $footer-bcg;
+  padding: 20px;
+
+  & .wrap {
+    display: flex; // .box-footer {
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+
+.social {
+  display: flex;
+  list-style-type: none;
+  padding-left: 0;
+
+  & > li {
+    margin-left: 40px;
+
+    & > a {
+      text-decoration: none;
+      color: $secondry-text;
+      font-size: 24px;
+    }
+  }
+}

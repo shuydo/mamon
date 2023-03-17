@@ -1,0 +1,1 @@
+https://youtu.be/EC4dNavbzwA?list=PL2zhi-fIpnXDmMyjgZ9zxnixsYPkRl1J8&t=2955 figma pixel-perfect
