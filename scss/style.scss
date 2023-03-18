@@ -28,26 +28,24 @@ body {
   font-weight: 700;
 }
 
-
-
 .logo {
   display: flex;
   align-items: center;
   text-decoration: none;
 
-  &_img {
-    display: block;
-    height: 58px;
-    width: 58px;
-    background-image: url(../img/logo.svg);
-    margin-right: 25px;
-  }
-
   &_text {
     font-size: 24px;
     font-weight: bold;
     color: #202020;
+    margin-left: 25px;
   }
+}
+
+.logo_img,
+.footer_img {
+  display: block;
+  height: 58px;
+  width: 58px; // background-image: url(../img/logo.svg);
 }
 
 .nav {
@@ -159,6 +157,7 @@ body {
     flex-basis: 183px;
     text-align: center;
     padding-top: 25px;
+    height: 60px;
   }
 
   &_text {
@@ -168,13 +167,56 @@ body {
 
 .clients {
   display: grid;
-  grid-template: repeat(4, 1fr) / repeat(4, 25%); // repeat(2, 1fr) / repeat(4, 25%) //120px 120px / repeat(4, 25%);  // text-align: center;
-  grid-row-gap: 40px;
-  padding-top: 85px;
-  padding-bottom: 22px;
+  grid-template: repeat(3, 1fr) / repeat(4, 25%); // repeat(2, 1fr) / repeat(4, 25%) //120px 120px / repeat(4, 25%);  // text-align: center;
+  grid-row-gap: 28px;
+  padding-top: 75px;
+  padding-bottom: 100px;
 
   &_i {
-    text-align: center;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+
+    // align-items: center;
+    // outline: 1px solid red;
+
+    & svg {
+      height: 40px;
+      // outline: 1px solid blue;
+    }
+  }
+  // .cl-01 svg,.cl-11 svg {    height: 40px;  } .cl-07 svg,  .cl-09 svg {    height: 39px;  }
+
+  .cl-02 svg {
+    height: 54px;
+  }
+
+  .cl-03 svg {
+    height: 48px;
+  }
+
+  .cl-04 svg {
+    height: 30px;
+  }
+
+  .cl-05 svg {
+    height: 35px;
+  }
+
+  .cl-06 svg {
+    height: 22px;
+  }
+
+  .cl-08 svg {
+    height: 32px;
+  }
+
+  .cl-10 svg {
+    height: 43px;
+  }
+
+  .cl-12 svg {
+    height: 53px;
   }
 }
 
@@ -187,30 +229,32 @@ body {
   &-item {
     display: flex;
     justify-content: flex-start; //~~~~~~~~~~
-    align-items: center; //~~~~~~~~~~~~
+    align-items: center; //~~~~~~~~~~~~    // outline: 1px solid red;
 
     & > img {
       margin-right: 35px;
     }
 
     & > div {
-      flex-basis: calc(100% - 100px); //~~~~~~~
+      margin-top: -5px;
+      flex-basis: calc(100% - 100px); //~~~~~~~      // outline: 1px solid blue;
     }
 
     & h3 {
       font-size: 28px;
       color: $grey;
-      margin-top: 8px;
-      margin-bottom: 0;
+      margin: 0;
+      line-height: 1;
     }
 
     & p {
       font-size: 14px;
       color: $secondry-text;
+      margin-top: 14px;
+      margin-bottom: 0;
     }
   }
 }
-
 
 footer {
   background-color: $footer-bcg;
@@ -222,7 +266,6 @@ footer {
     align-items: center;
   }
 }
-
 
 .social {
   display: flex;
